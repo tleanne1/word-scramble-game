@@ -1,6 +1,23 @@
 body {
   font-family: poppins;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: #5372f0;
+}
+
+.container {
+  width: 450px;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.container h2 {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 18px 25px;
+  border-bottom: 1px solid #cccccc;
 }
