@@ -15,7 +15,12 @@ const initTimer = (maxTime) => {
       return (timeText.innerText = maxTime);
     }
     clearInterval(timer);
-    alert(`Time up! ${correctWord.toUpperCase()} was the correct word`);
+    Swal.fire({
+      title: "Times Up!",
+      text: `${correctWord.toUpperCase()} was the correct word`,
+      icon: "error",
+      confirmButtonText: "Retry",
+    });
     initGame(); // calling initGame function, so the game restarts
   }, 1000);
 };
@@ -39,14 +44,30 @@ initGame();
 
 const checkWord = () => {
   let userWord = inputField.value.toLocaleLowerCase();
-  if (!userWord) return alert("Please enter a word"); // if user did not enter anything
+  if (!userWord)
+    return Swal.fire({
+      title: "Oops!",
+      text: "Please enter a word",
+      icon: "error",
+      confirmButtonText: "Retry",
+    }); // if user did not enter anything
 
   // if user word does not match with the correct word
   if (userWord !== correctWord)
-    return alert(`Oops! ${userWord} is not a correct word`);
+    return Swal.fire({
+      title: "Oops!",
+      text: `${userWord.toUpperCase()} is not a correct word`,
+      icon: "error",
+      confirmButtonText: "Retry",
+    });
 
   // if above two if conditions failed then show congrats alert because user word is correct
-  alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
+  Swal.fire({
+    title: "Congrats!",
+    text: `${userWord.toUpperCase()} is a correct word`,
+    icon: "success",
+    confirmButtonText: "Play Again",
+  });
 };
 initGame();
 
