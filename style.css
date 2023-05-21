@@ -23,7 +23,7 @@ body {
 }
 
 .container .content {
-  margin: 25px 20px 35px;
+  margin: 25px 20px 30px;
 }
 
 .content .word {
@@ -83,7 +83,7 @@ body {
   background: #ff9a9e;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 760px) {
   .container {
     padding: 0;
     width: 300px;
