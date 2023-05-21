@@ -82,3 +82,52 @@ body {
 .buttons .check-word {
   background: #ff9a9e;
 }
+
+@media (max-width: 540px) {
+  .container {
+    padding: 0;
+    width: 300px;
+    height: 300px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+    padding: 9px 12px;
+  }
+
+  .container .content {
+    margin: 12px 10px 16px;
+  }
+
+  .content .details {
+    margin: 12px 0 10px;
+  }
+
+  .content .word {
+    font-size: 18px;
+  }
+
+  .details p {
+    font-size: 14px;
+  }
+
+  .content input {
+    width: 86%;
+    height: 30px;
+    outline: none;
+    font-size: 14px;
+    padding: 0 16px;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+  }
+  .buttons button {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 12px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    width: calc(100% / 2 - 8px);
+  }
+}
